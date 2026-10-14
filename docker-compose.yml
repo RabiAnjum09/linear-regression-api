@@ -1,0 +1,11 @@
+
+services:
+  prediction-api:
+    image: rabia09/linear-regression-api:latest
+    build:
+      context: .
+      dockerfile: Dockerfile
+    container_name: linear-regression-api
+    restart: unless-stopped
+    ports:
+      - "5000:5000"
